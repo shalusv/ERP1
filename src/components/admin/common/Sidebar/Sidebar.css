@@ -1,0 +1,72 @@
+/* src/components/admin/common/Sidebar/Sidebar.css */
+.sidebar {
+  width: 200px; /* Default expanded width */
+  height: 100vh;
+  position: fixed;
+  background-color: #ffffff;
+  transition: width 0.3s;
+  box-shadow: 2px 0px 10px rgba(84, 85, 84, 0.3);
+}
+
+.logo {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  width: 80%;
+  transition: width 0.3s;
+}
+
+.nav {
+  margin-top: 20px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 20px 20px;
+  color: #34495e;
+  text-decoration: none;
+  margin-bottom: 1px solid #cf0b0bd7;
+}
+
+.nav-link svg {
+  width: 20px;
+  height: 20px;
+}
+
+.nav-link:hover {
+  background-color: #34495e;
+  color: #fff;
+}
+
+.nav-link .link-text {
+  margin-left: 10px;
+}
+
+/* Collapse styles */
+.sidebar.collapsed {
+  width: 60px; /* Collapsed width */
+}
+
+.sidebar.collapsed .logo img {
+  width: 40px; /* Adjust logo size when collapsed */
+}
+
+.sidebar.collapsed .nav-link .link-text {
+  display: none; /* Hide text when collapsed */
+}
+
+/* Automatically collapse sidebar on small screens */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px; /* Collapsed width for small screens */
+  }
+
+  .sidebar.expanded {
+    width: 200px; /* Expanded width for small screens */
+  }
+}
