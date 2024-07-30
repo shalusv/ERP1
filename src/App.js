@@ -1,23 +1,19 @@
 // src/App.js
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Navigate,
-} from "react-router-dom";
-import Dashboard from "./pages/admin/Dashboard";
-import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Dashboard from "./pages/admin/Dashboard/Dashboard";
+import Users from "./pages/admin/Users/Users";
+import Employees from "./pages/admin/Employees/Employees";
+import Purchases from "./pages/admin/Purchases/Purchases";
 
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Navigate to="/admin" replace />} />
-        <Route path="/admin/*" element={<Dashboard />} />
-      </Routes>
-    </Router>
-  );
-}
+const App = () => (
+  <Routes>
+    <Route path="/" element={<Dashboard />}>
+      <Route path="users" element={<Users />} />
+      <Route path="employees" element={<Employees />} />
+      <Route path="purchases" element={<Purchases />} />
+    </Route>
+  </Routes>
+);
 
 export default App;

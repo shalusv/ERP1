@@ -1,4 +1,3 @@
-/* src/components/admin/common/Header/Header.css */
 .header {
   height: 60px;
   background-color: #0f75bc;
@@ -7,6 +6,7 @@
   align-items: center;
   padding: 0 20px;
   transition: margin-left 0.3s;
+  position: relative; /* Add relative positioning */
 }
 
 .collapse-btn {
@@ -15,4 +15,9 @@
   color: #ecf0f1;
   font-size: 24px;
   cursor: pointer;
+  margin-right: 20px;
+}
+
+.profile-menu {
+  margin-left: auto; /* Push profile menu to the right */
 }

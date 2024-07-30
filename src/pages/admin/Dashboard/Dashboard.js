@@ -1,12 +1,13 @@
-// src/pages/admin/Dashboard.js
+// src/pages/admin/Dashboard/Dashboard.js
 import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import Sidebar from "../../components/admin/common/Sidebar/Sidebar";
-import Header from "../../components/admin/common/Header/Header";
-import Footer from "../../components/admin/common/Footer/Footer";
-import Users from "./Users";
-import Employees from "./Employees";
-import Purchases from "./Purchases";
+import Sidebar from "../../../components/admin/common/Sidebar/Sidebar";
+import Header from "../../../components/admin/common/Header/Header";
+import Footer from "../../../components/admin/common/Footer/Footer";
+import Users from "../Users/Users";
+import Employees from "../Employees/Employees";
+import Purchases from "../Purchases/Purchases";
+import Home from "../Home/Home"; // Import the Home component
 import "./Dashboard.css";
 
 const Dashboard = () => {
@@ -38,6 +39,7 @@ const Dashboard = () => {
         <Header onToggleSidebar={handleToggleSidebar} />
         <div className="content">
           <Routes>
+            <Route path="/" element={<Home />} /> {/* Default route */}
             <Route path="users" element={<Users />} />
             <Route path="employees" element={<Employees />} />
             <Route path="purchases" element={<Purchases />} />

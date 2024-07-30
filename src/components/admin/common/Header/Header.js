@@ -1,6 +1,6 @@
-// src/components/admin/common/Header/Header.js
 import React from "react";
 import "./Header.css";
+import ProfileMenu from "../ProfileMenu/ProfileMenu";
 
 const Header = ({ onToggleSidebar }) => {
   return (
@@ -9,6 +9,7 @@ const Header = ({ onToggleSidebar }) => {
         ☰
       </button>
       <h1>Dashboard</h1>
+      <ProfileMenu />
     </header>
   );
 };

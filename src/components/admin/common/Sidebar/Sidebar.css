@@ -7,6 +7,12 @@
   transition: width 0.3s;
   box-shadow: 2px 0px 10px rgba(84, 85, 84, 0.3);
 }
+.erp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
 .logo {
   display: flex;
@@ -30,7 +36,18 @@
   padding: 20px 20px;
   color: #34495e;
   text-decoration: none;
-  margin-bottom: 1px solid #cf0b0bd7;
+  border-bottom: 1px solid #666;
+  position: relative; /* For positioning the border */
+}
+
+.nav-link:first-child {
+  border-top: 1px solid #666;
+}
+
+.nav-link::after {
+  content: "";
+  display: block;
+  border-bottom: 10px solid #666; /* Adjust as needed */
 }
 
 .nav-link svg {
@@ -45,6 +62,11 @@
 
 .nav-link .link-text {
   margin-left: 10px;
+}
+
+/* Style for active link */
+.nav-link-active {
+  border-right: 5px solid #0a75e0; /* Add border to right of active link */
 }
 
 /* Collapse styles */
